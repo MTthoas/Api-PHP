@@ -24,4 +24,7 @@ CREATE TABLE messages(
     roomId INT NOT NULL REFERENCES rooms(id)
 );
 
-INSERT INTO users(email, password) VALUES('john@doe.com', 'password');
+INSERT INTO users(role, email, password) VALUES('USER','john@doe.com', 'password');
+INSERT INTO users(role, email, password) VALUES('ADMINISTRATOR','sananes@doe.com', 'password');
+
+INSERT INTO room()

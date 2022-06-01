@@ -15,8 +15,9 @@ class UserModel{
     public static function create($user){
         $connection = getDatabaseConnection();
         $createUsersQuery = $connection->
-            prepare("INSERT INTO users(id,email,role,password) 
-                    VALUES (:id,:email,:role,:password);");
+            prepare("INSERT INTO users(email,role,password) 
+                    VALUES (:email,:role,:password);");
+        $createUsersQuery->execute($user);
     }
 
     public static function getById($id)

@@ -1,0 +1,343 @@
+{
+    "info": {
+        "_postman_id": "d92d37e0-624e-4ee6-af44-906cd8705b79",
+        "name": "TP-Sujet",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [{
+        "name": "login",
+        "item": [{
+            "name": "POST",
+            "id": "5eedd58a-ac5d-4fd2-b0ce-ef996ebe6c9f",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"email\":\"zdaddazdad@lyges.com\",\r\n    \"password\":\"password\"\r\n}"
+                },
+                "url": "http://localhost/TP-Sujet/login"
+            },
+            "response": []
+        }],
+        "id": "49f5fe5a-0951-48a4-8df4-2488bd01a0a6"
+    }, {
+        "name": "logout",
+        "item": [{
+            "name": "DELETE",
+            "id": "069d49b5-e158-44d1-81d7-a6ec9969a587",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"token\": \"6604433f61e950b189b6c8d2dc95b6ac\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://localhost/TP-Sujet/logout"
+            },
+            "response": []
+        }],
+        "id": "c9871c1f-8288-46f2-b358-160a058eb185"
+    }, {
+        "name": "users",
+        "item": [{
+            "name": "GET",
+            "id": "9ea359e2-ea9c-42de-ac26-921f722a073d",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [{
+                    "key": "token",
+                    "value": "e26f3b525e7191d532eabf7e38b9a2a2",
+                    "type": "text"
+                }, {
+                    "key": "role",
+                    "value": "Ad",
+                    "type": "text",
+                    "disabled": true
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://localhost/TP-Sujet/users"
+            },
+            "response": []
+        }, {
+            "name": "PATCH",
+            "id": "b8da029d-ac77-4f7f-b82f-8f7b4a045402",
+            "request": {
+                "method": "PATCH",
+                "header": [{
+                    "key": "token",
+                    "value": "55912debabe5fa3aba162293b98e0632",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id\":\"5\",\r\n    \"email\":\"test@com\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://localhost/TP-Sujet/users"
+            },
+            "response": []
+        }, {
+            "name": "POST",
+            "id": "0e9eb118-b5d3-4810-bc3a-f4a2ab3cecb4",
+            "request": {
+                "method": "POST",
+                "header": [{
+                    "key": "token",
+                    "value": "97e50c116ae1903b80fcc655d1694b54",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"email\":\"zdaddazdad@lyges.com\",\r\n    \"role\":\"USER\",\r\n    \"password\":\"password\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://localhost/TP-Sujet/users"
+            },
+            "response": []
+        }, {
+            "name": "DELETE",
+            "id": "830bfcef-6666-442e-ba4b-c3a7b3ae513c",
+            "request": {
+                "method": "DELETE",
+                "header": [{
+                    "key": "token",
+                    "value": "55912debabe5fa3aba162293b98e0632",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id\":\"4\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost/TP-Sujet/users",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["TP-Sujet", "users"],
+                    "query": [{
+                        "key": "token",
+                        "value": "97e50c116ae1903b80fcc655d1694b54",
+                        "disabled": true
+                    }]
+                }
+            },
+            "response": []
+        }],
+        "id": "6bb401f1-7e31-48df-be3e-e2b2f96112da"
+    }, {
+        "name": "rooms",
+        "item": [{
+            "name": "PATCH",
+            "id": "c862b2a4-92b3-47f6-8e99-919c67052664",
+            "request": {
+                "method": "PATCH",
+                "header": [{
+                    "key": "token",
+                    "value": "55912debabe5fa3aba162293b98e0632",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id\":\"5\",\r\n    \"email\":\"test@com\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://localhost/TP-Sujet/rooms"
+            },
+            "response": []
+        }, {
+            "name": "GET",
+            "id": "1ca1e981-ad19-4d26-bf11-5ac2404a86e0",
+            "request": {
+                "method": "GET",
+                "header": [{
+                    "key": "token",
+                    "value": "1e42f84c4304553d4fa4bd209f9b6327",
+                    "type": "text"
+                }],
+                "url": "http://localhost/TP-Sujet/rooms"
+            },
+            "response": []
+        }, {
+            "name": "POST",
+            "id": "559d15ba-539f-4211-9e4b-8321f8b38097",
+            "request": {
+                "method": "POST",
+                "header": [{
+                    "key": "token",
+                    "value": "97e50c116ae1903b80fcc655d1694b54",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"email\":\"zdaddazdad@lyges.com\",\r\n    \"role\":\"USER\",\r\n    \"password\":\"password\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://localhost/TP-Sujet/rooms"
+            },
+            "response": []
+        }, {
+            "name": "DELETE",
+            "id": "18d0d051-547a-4762-98e6-867868772867",
+            "request": {
+                "method": "DELETE",
+                "header": [{
+                    "key": "token",
+                    "value": "55912debabe5fa3aba162293b98e0632",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id\":\"4\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost/TP-Sujet/rooms",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["TP-Sujet", "rooms"],
+                    "query": [{
+                        "key": "token",
+                        "value": "97e50c116ae1903b80fcc655d1694b54",
+                        "disabled": true
+                    }]
+                }
+            },
+            "response": []
+        }],
+        "id": "91de0543-b1ab-42ac-9a0a-927e8ca8b933"
+    }, {
+        "name": "messages",
+        "item": [{
+            "name": "PATCH",
+            "id": "cde0baf9-5d22-48cc-92bf-13691807a8c7",
+            "request": {
+                "method": "PATCH",
+                "header": [{
+                    "key": "token",
+                    "value": "55912debabe5fa3aba162293b98e0632",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id\":\"5\",\r\n    \"email\":\"test@com\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://localhost/TP-Sujet/messages"
+            },
+            "response": []
+        }, {
+            "name": "GET",
+            "id": "fcbc8012-440c-4250-a63c-0ab05bd110c9",
+            "request": {
+                "method": "GET",
+                "header": [{
+                    "key": "token",
+                    "value": "1e42f84c4304553d4fa4bd209f9b6327",
+                    "type": "text"
+                }],
+                "url": "http://localhost/TP-Sujet/messages"
+            },
+            "response": []
+        }, {
+            "name": "POST",
+            "id": "e735db80-5523-4a74-ad91-5c77289abb8e",
+            "request": {
+                "method": "POST",
+                "header": [{
+                    "key": "token",
+                    "value": "97e50c116ae1903b80fcc655d1694b54",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"email\":\"zdaddazdad@lyges.com\",\r\n    \"role\":\"USER\",\r\n    \"password\":\"password\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://localhost/TP-Sujet/messages"
+            },
+            "response": []
+        }, {
+            "name": "DELETE",
+            "id": "246c2b10-65b2-42fb-8b75-06a57cde8c7f",
+            "request": {
+                "method": "DELETE",
+                "header": [{
+                    "key": "token",
+                    "value": "55912debabe5fa3aba162293b98e0632",
+                    "type": "text"
+                }],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"id\":\"4\"\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost/TP-Sujet/messages",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["TP-Sujet", "messages"],
+                    "query": [{
+                        "key": "token",
+                        "value": "97e50c116ae1903b80fcc655d1694b54",
+                        "disabled": true
+                    }]
+                }
+            },
+            "response": []
+        }],
+        "id": "c46cb210-32d0-4554-b096-b92e5532e6ed"
+    }]
+}
